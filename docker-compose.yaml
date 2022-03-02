@@ -1,0 +1,14 @@
+version: '3.8'
+volumes:
+  data:
+
+services:
+  emergencykittens:
+    container_name: emergencykittens
+    build: .
+    ports:
+      - '8080:80'
+    restart: always
+    volumes:
+      - ./:/usr/share/nginx/html
+
